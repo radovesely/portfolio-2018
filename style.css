@@ -91,7 +91,7 @@ div.progress {
 .logo {
     text-decoration: none;
     color: #fff;
-    font-family: futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     letter-spacing: 3px;
     margin-top: 20px;
     float: left;
@@ -120,7 +120,7 @@ h1 {
 
 h2 {
     color: #fff;
-    font-family: futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;;
     font-weight: 400;
     padding-top: 10%;
     padding-left: 10%;
@@ -130,7 +130,7 @@ h2 {
 
 h3 {
     color: #fff;
-    font-family: futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px;
     font-size: 17px;
@@ -237,7 +237,7 @@ p.contact-text {
     margin-top: 10%;
     font-size: 20px;
     font-weight: 100;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -330,7 +330,7 @@ section.project-page {
 
 h4 {
     color: #000;
-    font-family: futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 400;
     padding-top: 10%;
     padding-left: 5%;
@@ -405,23 +405,26 @@ border: 1px solid darkgrey;
         overflow: visible;
     }
     img.project {
+        width: 80%;
         position: relative;
         box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.5);
     }
-    img.project:hover {
-    opacity: 0.3;
-}
 
 
+    #projects a {
+        position: relative;
+        will-change: transform;
+    }
     div.design-objects {
     display: inherit;
 }
 
     a.p-1 {
-        width: 150%;
+        width: 170%;
         height: auto;
         grid-column: 3 / span 3;
         grid-row: 1/ span 4;
+        z-index: 100;
     }
     a.p-2 {
           width: 120%;
@@ -432,14 +435,14 @@ border: 1px solid darkgrey;
     a.p-3 {
          width: 100%;
         height: auto;
-        grid-column: 4 / span 3;
+        grid-column: 3 / span 3;
         grid-row: 5/ span 2;
 
     }
     a.p-4 {
-        width: 120%;
+        width: 200%;
         height: auto;
-        grid-column: 1 / span 2;
+        grid-column: 2 / span 2;
         grid-row: 1/ span 2;
     }
     a.p-5 {
@@ -449,13 +452,13 @@ border: 1px solid darkgrey;
         grid-row: 7/ span 3;
     }
     a.p-6 {
-        width: 100%;
+        width: 135%;
         height: auto;
         grid-column: 7 / span 3;
-        grid-row: 5/ span 3;
+        grid-row: 7/ span 3;
     }
     a.p-7 {
-         width: 150%;
+         width: 175%;
         height: auto;
         grid-column: 1 / span 3;
         grid-row: 9/ span 2;
@@ -471,7 +474,6 @@ border: 1px solid darkgrey;
     }
 
     div.shape,
-    .shape-black
     , div.shape2,
     div.shape-black2
     {
@@ -502,16 +504,39 @@ border: 1px solid darkgrey;
             transform: rotate(360deg);
         }
     }
-    div.shape2 {
-        margin-top: 23%;
+
+    div.shape {
+         position: absolute;
+        margin-left: 65%;
+        margin-top: -90%;
         width: 50px;
         height: 50px;
+        border: 2px solid yellow;
+        box-shadow: none;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+
+    }
+
+    div.shape2 {
+        position: absolute;
+        margin-left: 61%;
+        margin-top: 52%;
+        width: 50px;
+        height: 50px;
+        border: 2px solid yellow;
+        box-shadow: none;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+
     }
 
 
     div.shape-black {
         margin-left: 10%;
-        margin-top: 90%;
+        margin-top: -50%;
         border: 2px solid #000;
         border-radius: 50%;
         width: 80px;
@@ -521,14 +546,16 @@ border: 1px solid darkgrey;
      img.dots {
          position: absolute;
          text-align: right;
-        margin-top: -60%;
+        margin-top: -40%;
          margin-left: 80%;
         width: 300px;
         height:auto;
         z-index: -1;
     }
 
-.about {}
+.about {
+    margin-top: 23%;
+    }
 
 .about-grid {
     display: grid;
@@ -592,7 +619,7 @@ section.project-page {
 
 h4 {
     color: #000;
-    font-family: futura;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     font-weight: 400;
     padding-top: 10%;
     padding-left: 5%;
@@ -606,5 +633,8 @@ h4 {
         margin: 0 35% 0 35%;
     }
 
+    img.project:hover {
+    opacity: 0.3;
 
+}
 }

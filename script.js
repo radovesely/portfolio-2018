@@ -1,17 +1,32 @@
+var p1 = document.querySelectorAll("#projects a")//$("a.p-1")
+var shape = document.querySelector("div.shape")
+var shapeBlack = document.querySelector("div.shape-black")
+
 $(document).on("scroll", function () {
+  if(window.matchMedia("(min-width: 830px)").matches){
+        var pixels = $(document).scrollTop()
+        p1[0].style.transform = "translateY("+pixels * -0.50+"px)"
+        p1[1].style.transform = "translateY("+pixels * 0.10+"px)"
+        p1[2].style.transform = "translateY("+pixels * 0+"px)"
+        p1[3].style.transform = "translateY("+pixels * 0.1+"px)"
+        p1[4].style.transform = "translateY("+pixels * -0.80+"px)"
+        p1[5].style.transform = "translateY("+pixels * -0.30+"px)"
+        p1[6].style.transform = "translateY("+pixels * -0.25+"px)"
+        p1[7].style.transform = "translateY("+pixels * 0.10+"px)"
+        shapeBlack.style.transform = "translateY("+pixels * -0.25+"px)"
+    } else {
+        p1.forEach(p=>p.style.transform = "translateY(0)")
+    }
+    /*$("a.p-2").css("top", pixels *  0)
+    $("a.p-3").css("top", pixels * -0.25)
+    $("a.p-4").css("top", pixels * 0.1)
+    $("a.p-5").css("top", pixels * -0.80)
+    $("a.p-6").css("top", pixels * 0)
+    $("a.p-7").css("top", pixels * -0.25)
+    $("a.p-8").css("top", pixels * 0.15)
 
-    var pixels = $(document).scrollTop()
-
-    $("img.parallax1").css("top", pixels * -0.50)
-    $("img.parallax2").css("top", pixels *  0.30)
-    $("img.parallax3").css("top", pixels * -0.25)
-    $("img.parallax4").css("top", pixels *  0.40)
-    $("img.parallax5").css("top", pixels * -1.15)
-    $("img.parallax6").css("top", pixels * 0)
-    $("img.parallax7").css("top", pixels * -0.25)
-    $("img.parallax8").css("top", pixels * 0.15)
     $("div.shape").css("top", pixels * 0.30)
-    $("div.shape-black").css("top", pixels * -0.25)
+    $("div.shape-black").css("top", pixels * -0.25)*/
 })
 
 function openNav() {
